@@ -19,12 +19,12 @@ AFRAME.registerComponent("tour", {
 
       {
         id: "eiffel-tower",
-        title: "Eiffel Tower",
+        title: "Torre Eiffel",
         url: "./assets/thumbnails/eiffel_tower.jpg",
       },
       {
         id: "new-york-city",
-        title: "New York City",
+        title: "Nueva York",
         url: "./assets/thumbnails/new_york_city.png",
       },
     ];
@@ -38,14 +38,14 @@ AFRAME.registerComponent("tour", {
       const position = { x: posX, y: posY, z: posZ };
       prevoiusXPosition = posX;
 
-      // Border Element
+      // Elemento de borde
       const borderEl = this.createBorder(position, item.id);
 
-      // Thumbnail Element
+      // Elemento de miniatura
       const thumbNail = this.createThumbNail(item);
       borderEl.appendChild(thumbNail);
 
-      // Title Text Element
+      // Elemento del texto del título
       const titleEl = this.createTitleEl(position, item);
       borderEl.appendChild(titleEl);
 
